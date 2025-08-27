@@ -5,6 +5,7 @@ import Image from "next/image";
 import Link from "next/link";
 import React from "react";
 import { NavigationMenu } from "./types";
+import ModeToggle from "./ModeToggle";
 
 const Header = () => {
   const navigationMenus: NavigationMenu[] = [
@@ -37,6 +38,8 @@ const Header = () => {
           <span className="hidden lg:block text-2xl ml-3">{APP_NAME}</span>
         </div>
         <div className="space-x-2">
+          <ModeToggle />
+
           {navigationMenus.map((navItem) => (
             <Button key={navItem.id} asChild variant={navItem.variant}>
               <Link href={`/${navItem.id}`}>
