@@ -9,3 +9,7 @@ export function cn(...inputs: ClassValue[]) {
 export const convertObjextToJSON = <T>(obj: T): T => {
   return JSON.parse(JSON.stringify(obj));
 };
+
+export const formatNumberWithDecimal = (num: number): string => {
+  return num.toFixed(2);
+};
